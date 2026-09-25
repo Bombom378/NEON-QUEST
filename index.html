@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEON QUEST</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="game-wrapper">
+
+        <header class="topbar">
+            <div>
+                <h1>⚡ NEON QUEST</h1>
+                <p>Collect. Dodge. Survive.</p>
+            </div>
+
+            <div class="top-buttons">
+                <button id="pauseBtn">⏸ Pause</button>
+                <button id="soundBtn">🔊 Sound</button>
+            </div>
+        </header>
+
+
+        <section class="stats">
+
+            <div class="stat">
+                <span>⭐ SCORE</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>💎 ENERGY</span>
+                <strong id="energy">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>🔥 COMBO</span>
+                <strong id="combo">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>❤️ LIVES</span>
+                <strong id="lives">3</strong>
+            </div>
+
+            <div class="stat">
+                <span>⏱ TIME</span>
+                <strong id="time">60</strong>
+            </div>
+
+        </section>
+
+
+        <main class="game-container">
+
+            <canvas id="gameCanvas">
+                Your browser does not support HTML Canvas.
+            </canvas>
+
+
+            <!-- START SCREEN -->
+
+            <div class="screen" id="startScreen">
+
+                <div class="panel">
+
+                    <div class="big-icon">⚡</div>
+
+                    <h2>NEON QUEST</h2>
+
+                    <p>
+                        Enter the arena, collect energy and survive
+                        for 60 seconds.
+                    </p>
+
+                    <div class="instructions">
+                        <p>🖥️ Desktop: Use WASD or Arrow Keys</p>
+                        <p>📱 Mobile: Use the controls below</p>
+                        <p>💎 Blue orbs give energy</p>
+                        <p>☄️ Avoid the falling meteors</p>
+                    </div>
+
+                    <button class="main-btn" id="startBtn">
+                        🚀 START GAME
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- GAME OVER -->
+
+            <div class="screen hidden" id="gameOverScreen">
+
+                <div class="panel">
+
+                    <div class="big-icon">🏆</div>
+
+                    <h2>MISSION COMPLETE</h2>
+
+                    <p>Your final score:</p>
+
+                    <div class="final-score" id="finalScore">0</div>
+
+                    <p id="highScoreMessage"></p>
+
+                    <button class="main-btn" id="restartBtn">
+                        🔄 PLAY AGAIN
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PAUSED -->
+
+            <div class="screen hidden" id="pauseScreen">
+
+                <div class="panel">
+
+                    <div class="big-icon">⏸️</div>
+
+                    <h2>GAME PAUSED</h2>
+
+                    <button class="main-btn" id="resumeBtn">
+                        ▶ RESUME
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <!-- MOBILE CONTROLS -->
+
+        <div class="mobile-controls">
+
+            <button data-key="ArrowUp">▲</button>
+
+            <div>
+                <button data-key="ArrowLeft">◀</button>
+                <button data-key="ArrowDown">▼</button>
+                <button data-key="ArrowRight">▶</button>
+            </div>
+
+        </div>
+
+
+        <footer>
+            <p>NEON QUEST • Built By Vincent Somtochukwu David</p>
+            <p>By VINX COMPANY 😠 👿</p>
+        </footer>g
+
+    </div>
+
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
